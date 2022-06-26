@@ -1,0 +1,126 @@
+// Imprted files
+
+@use "../Styles/GMCV.scss" as *;
+
+/* Styling */
+
+body {
+  background-color: $bodyBg;
+  height: 100vh;
+  @include flex-centering;
+}
+
+.container {
+  position: relative;
+  background-color: $cardBg;
+  border-radius: 1em;
+  min-width: 300px;
+  min-height: 400px;
+  transform-style: preserve-3d;
+  transform-origin: right;
+  transition-duration: 1s;
+
+  >div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.5em;
+    backface-visibility: hidden;
+  }
+
+  .front {
+
+    .img-container {
+      @include circle(40px);
+      background-color: $btnsBg;
+      @include flex-centering;
+    }
+
+    .feedback-text {
+      h2 {
+        color: white;
+        margin: 1em 0;
+      }
+
+      p {
+        color: $hoverState;
+        opacity: .8;
+        font-size: .9rem;
+      }
+    }
+
+    .btns-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 2em 0;
+
+      button.rating-btn {
+        background-color: $btnsBg;
+        @include circle(40px);
+        @include flex-centering;
+        color: $hoverState;
+        transition-duration: .5s;
+
+        &:hover {
+          background-color: $hoverState;
+          color: white;
+        }
+      }
+    }
+
+    >button.submit-btn {
+      width: 100%;
+      background-color: $mainColor;
+      color: $white;
+      text-align: center;
+      padding: 1em;
+      border-radius: 100vh;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition-duration: .5s;
+
+      &:hover {
+        background-color: $white;
+        color: $mainColor;
+      }
+    }
+  }
+
+  .back {
+    transform: rotateY(-180deg);
+    @include flex-centering;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2.5em 2em;
+
+    .user-rating {
+      background-color: $btnsBg;
+      padding: .5em 1em;
+      border-radius: 100vh;
+      color: $mainColor;
+      width: max-content;
+      font-size: .9rem;
+      opacity: .8;
+      margin-top: .5em;
+    }
+
+    .thanking-text {
+      h2 {
+        color: $white;
+        text-align: center;
+        margin: .5em;
+        text-transform: none;
+      }
+
+      p {
+        color: $hoverState;
+        opacity: .8;
+        font-size: .9rem;
+        text-align: center;
+        line-height: 25px;
+      }
+    }
+  }
+}

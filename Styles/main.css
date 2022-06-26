@@ -1,0 +1,136 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+i,
+button,
+input[type=submit] {
+  cursor: pointer;
+}
+
+body {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Overpass", sans-serif;
+}
+
+/* Styling */
+body {
+  background-color: #121417;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  background-color: #252d37;
+  border-radius: 1em;
+  min-width: 300px;
+  min-height: 400px;
+  transform-style: preserve-3d;
+  transform-origin: right;
+  transition-duration: 1s;
+}
+.container > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1.5em;
+  backface-visibility: hidden;
+}
+.container .front .img-container {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(124, 135, 152, 0.212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .front .feedback-text h2 {
+  color: white;
+  margin: 1em 0;
+}
+.container .front .feedback-text p {
+  color: #959eac;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+.container .front .btns-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2em 0;
+}
+.container .front .btns-container button.rating-btn {
+  background-color: rgba(124, 135, 152, 0.212);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #959eac;
+  transition-duration: 0.5s;
+}
+.container .front .btns-container button.rating-btn:hover {
+  background-color: #959eac;
+  color: white;
+}
+.container .front > button.submit-btn {
+  width: 100%;
+  background-color: #fb7413;
+  color: white;
+  text-align: center;
+  padding: 1em;
+  border-radius: 100vh;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition-duration: 0.5s;
+}
+.container .front > button.submit-btn:hover {
+  background-color: white;
+  color: #fb7413;
+}
+.container .back {
+  transform: rotateY(-180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2.5em 2em;
+}
+.container .back .user-rating {
+  background-color: rgba(124, 135, 152, 0.212);
+  padding: 0.5em 1em;
+  border-radius: 100vh;
+  color: #fb7413;
+  width: max-content;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 0.5em;
+}
+.container .back .thanking-text h2 {
+  color: white;
+  text-align: center;
+  margin: 0.5em;
+  text-transform: none;
+}
+.container .back .thanking-text p {
+  color: #959eac;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 25px;
+}
+
+/*# sourceMappingURL=main.css.map */
