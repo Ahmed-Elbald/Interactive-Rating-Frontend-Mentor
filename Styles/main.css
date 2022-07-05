@@ -54,9 +54,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container .front .feedback-text h2 {
+.container .front .feedback-text h1 {
   color: white;
   margin: 1em 0;
+  font-size: 1.5rem;
 }
 .container .front .feedback-text p {
   color: #959eac;
